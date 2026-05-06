@@ -41,9 +41,11 @@
   --shadow-hero:0 40px 80px rgba(0,0,0,.5);
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100vw}
 body{font-family:var(--font-b);color:var(--gray-700);background:var(--white);
-  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
+*{box-sizing:border-box;min-width:0}
+img,video{max-width:100%;height:auto;display:block}
 
 /* ── NAVIGATION ── */
 nav{position:fixed;inset:0 0 auto;z-index:500;height:68px;
@@ -614,6 +616,128 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
   font-family:var(--font-d);font-weight:700;font-size:13px;cursor:pointer;
   display:inline-flex;align-items:center;gap:6px;transition:all 200ms var(--ease)}
 .btn-back:hover{background:var(--gray-100)}
+
+/* ════════════════════════════════════════
+   MOBILE — COMPREHENSIVE RESPONSIVE FIXES
+   ════════════════════════════════════════ */
+
+/* ── Tablet & below (≤ 900px) ── */
+@media(max-width:900px){
+  /* CTA band: stack vertically */
+  .cta-band-inner{flex-direction:column;align-items:stretch;gap:20px}
+  .cta-band-btns{flex-direction:column;gap:10px;flex-shrink:1}
+  .cta-band-btns .btn{width:100%;justify-content:center}
+
+  /* Section CTA: stack */
+  .section-cta{flex-direction:column;align-items:stretch}
+  .section-cta .btn{width:100%;justify-content:center;text-align:center}
+
+  /* Showcase actions */
+  .showcase-actions{flex-direction:column}
+  .btn-wpp,.btn-blue{width:100%;justify-content:center}
+
+  /* Photo strip: single column on tablet */
+  .photo-strip{grid-template-columns:1fr;max-height:none}
+  .photo-strip-item{height:240px}
+}
+
+/* ── Mobile (≤ 640px) ── */
+@media(max-width:640px){
+  /* Nav */
+  .nav-logo{height:40px}
+  .nav-cta{font-size:11.5px!important;padding:8px 13px;gap:4px}
+  .nav-cta svg{width:13px;height:13px}
+
+  /* Hero */
+  .hero-inner{padding:72px 20px 48px}
+  .hero-badge{font-size:9.5px;letter-spacing:.12em;padding:5px 11px}
+  .hero-title{letter-spacing:-.025em}
+  .hero-sub{font-size:14px}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .hero-actions .btn-ghost{width:100%;justify-content:center}
+
+  /* Trust bar */
+  .trust-bar{gap:12px 20px;justify-content:flex-start;padding:14px 20px}
+  .trust-item{font-size:11.5px}
+
+  /* Sections padding */
+  .section{padding:52px 20px}
+  .highlights-bg{padding:52px 20px}
+  .corp-img-section{padding:52px 20px}
+
+  /* Section headings */
+  .section-h{letter-spacing:-.02em}
+  .section-d{font-size:14.5px}
+
+  /* Tiles */
+  .tiles-grid{gap:10px;margin-bottom:52px}
+
+  /* Showcase */
+  .showcase{gap:32px}
+  .showcase-title{font-size:clamp(22px,6vw,32px)}
+
+  /* About */
+  .metric-val{font-size:26px}
+  .about-grid{margin-top:36px}
+
+  /* Benefits */
+  .benefits-grid{margin-top:36px;border-radius:var(--r-lg)}
+  .benefit-card{padding:28px 20px}
+
+  /* Steps */
+  .steps-grid{margin-top:36px;border-radius:var(--r-lg)}
+  .step-card{padding:28px 20px}
+  .step-num{font-size:36px}
+
+  /* Comparison table */
+  .table-wrap{margin-top:36px;border-radius:var(--r-lg)}
+  .compare-table thead th{padding:14px 16px;font-size:11.5px}
+  .th-feat{width:130px}
+  .compare-table tbody td{padding:12px 16px;font-size:12.5px}
+
+  /* Segments */
+  .segments-grid{margin-top:36px;gap:10px}
+  .segment-card{padding:20px 18px}
+
+  /* Corp image */
+  .corp-img-photo img{height:220px}
+  .corp-img-copy h2{font-size:clamp(22px,6vw,30px)}
+  .corp-img-copy p{font-size:14px}
+
+  /* FAQ */
+  .faq-list{margin-top:36px}
+  .faq-q{font-size:13.5px;padding:16px 18px;gap:10px}
+  .faq-a-inner{padding:0 18px 16px;font-size:13.5px}
+
+  /* Section CTA extra */
+  .section-cta{margin-top:36px;padding-top:32px;gap:10px}
+
+  /* Footer */
+  .footer-bottom{flex-direction:column;text-align:center;gap:8px}
+
+  /* WPP float */
+  .wpp-float{bottom:18px;right:16px;width:54px;height:54px}
+  .wpp-float svg{width:28px;height:28px}
+  .wpp-float::before{inset:-7px}
+  .wpp-float::after{inset:-14px}
+  .wpp-tooltip{display:none}
+
+  /* Quiz card */
+  .quiz-body{padding:20px 20px 24px}
+  .quiz-header{padding:22px 20px 20px}
+  .quiz-result{padding:24px 20px}
+  .quiz-residential{padding:24px 20px}
+}
+
+/* ── Small phones (≤ 390px) ── */
+@media(max-width:390px){
+  .nav-cta span{display:none}
+  .nav-logo{height:36px}
+  .hero-title{font-size:30px}
+  .tiles-grid{grid-template-columns:1fr}
+  .segment-card p{font-size:12.5px}
+}
 </style>
 </head>
 <body>
