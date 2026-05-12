@@ -1005,7 +1005,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
             Suporte técnico direto: sem terceiros, sem call center
           </li>
         </ul>
-        <div class="section-cta" style="justify-content:flex-start;border-top:none;padding-top:28px;margin-top:28px">
+        <div class="section-cta" style="border-top:none;padding-top:28px;margin-top:28px">
           <a href="#" class="btn btn-green" onclick="openQuiz(event)">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.28 11.9a19.79 19.79 0 01-3-8.59A2 2 0 013.26 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             Verificar viabilidade no meu endereço
@@ -1407,26 +1407,71 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
           <span class="quiz-step-badge">Passo 1 de 3</span>
           <div class="quiz-progress"><div class="quiz-progress-bar" style="width:33%"></div></div>
         </div>
-        <h3>Você busca internet para casa ou para sua empresa?</h3>
+        <h3>Qual é o segmento da sua empresa?</h3>
       </div>
       <div class="quiz-body">
         <div class="quiz-options">
-          <div class="quiz-option" onclick="showResidential()">
-            <div class="quiz-opt-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="quiz-opt-text">
-              <strong>Uso Residencial</strong>
-              <span>Internet para minha casa ou apartamento</span>
-            </div>
-          </div>
-          <div class="quiz-option" onclick="goToStep(2)">
+          <div class="quiz-option" onclick="selectNiche('Escritórios e Serviços'); goToStep(2)">
             <div class="quiz-opt-ico">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
             </div>
             <div class="quiz-opt-text">
-              <strong>Empresa (PJ)</strong>
-              <span>Internet corporativa para meu negócio</span>
+              <strong>Escritórios e Serviços</strong>
+              <span>Advocacias, contabilidades, consultorias</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Clínicas e Saúde'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Clínicas e Saúde</strong>
+              <span>Hospitais, clínicas, laboratórios, odontologia</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Hotelaria e Turismo'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Hotelaria e Turismo</strong>
+              <span>Hotéis, pousadas, resorts, espaços de eventos</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Indústria e Logística'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8l5 3v5h-5V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Indústria e Logística</strong>
+              <span>Galpões, fábricas, distribuidoras, transportadoras</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Varejo e Franquias'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Varejo e Franquias</strong>
+              <span>Lojas, redes, franquias, centros comerciais</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Condomínios e Incorporadoras'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="22" x2="9" y2="2"/><path d="M8 7h1m4 0h1M8 11h1m4 0h1M8 15h1m4 0h1"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Condomínios e Incorporadoras</strong>
+              <span>Condomínios empresariais, torres comerciais</span>
+            </div>
+          </div>
+          <div class="quiz-option" onclick="selectNiche('Outro segmento'); goToStep(2)">
+            <div class="quiz-opt-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="quiz-opt-text">
+              <strong>Outro segmento</strong>
+              <span>Minha empresa é de outro ramo de atividade</span>
             </div>
           </div>
         </div>
@@ -1576,11 +1621,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
 </div>
 
 <script>
-let companySize='', problem='';
+let niche='', companySize='', problem='';
 
 function openQuiz(e){
   if(e){e.preventDefault();}
-  companySize=''; problem='';
+  niche=''; companySize=''; problem='';
   goToStep(1);
   document.getElementById('quizOverlay').classList.add('active');
   document.body.style.overflow='hidden';
@@ -1612,6 +1657,7 @@ function showResidential(){
   document.getElementById('quizResidential').style.display='block';
 }
 
+function selectNiche(n){ niche=n; }
 function selectSize(s){ companySize=s; }
 function selectProblem(p){ problem=p; }
 
@@ -1645,8 +1691,9 @@ function showResult(){
     text:'Nossa equipe vai preparar uma proposta personalizada. Resposta em até 2 horas.'
   };
 
+  const nicheInfo=niche ? `Segmento: ${niche}. ` : '';
   const sizeInfo=companySize ? `Empresa de ${companySize}` : 'Empresa corporativa';
-  const wppText=encodeURIComponent(`Olá! Vim pelo site da NOVACIA. ${sizeInfo}. Desafio: ${problem}. Gostaria de uma proposta de Link Dedicado.`);
+  const wppText=encodeURIComponent(`Olá! Vim pelo site da NOVACIA. ${nicheInfo}${sizeInfo}. Desafio: ${problem}. Gostaria de uma proposta de Link Dedicado.`);
 
   document.getElementById('resultTitle').textContent=msg.title;
   document.getElementById('resultText').textContent=msg.text;
