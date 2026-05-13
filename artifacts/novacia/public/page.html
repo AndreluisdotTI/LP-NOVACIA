@@ -513,6 +513,23 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
 .section-cta .btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.5);
   background:rgba(255,255,255,.05)}
 
+/* Section CTA — light-background variants */
+.about-bg .section-cta,
+.benefits-bg .section-cta,
+.compare-bg .section-cta,
+.segments-bg .section-cta,
+.faq-bg .section-cta{border-top-color:var(--gray-200)}
+.about-bg .section-cta .btn-ghost,
+.benefits-bg .section-cta .btn-ghost,
+.compare-bg .section-cta .btn-ghost,
+.segments-bg .section-cta .btn-ghost,
+.faq-bg .section-cta .btn-ghost{color:var(--navy);border-color:var(--gray-300);background:transparent}
+.about-bg .section-cta .btn-ghost:hover,
+.benefits-bg .section-cta .btn-ghost:hover,
+.compare-bg .section-cta .btn-ghost:hover,
+.segments-bg .section-cta .btn-ghost:hover,
+.faq-bg .section-cta .btn-ghost:hover{color:var(--navy);border-color:var(--navy);background:var(--gray-100)}
+
 /* ── CORPORATE IMAGE SECTION ── */
 .corp-img-section{padding:80px clamp(16px,5vw,80px);background:var(--ink)}
 .corp-img-inner{max-width:1120px;margin:0 auto;
@@ -1005,14 +1022,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.36);
             Suporte técnico direto: sem terceiros, sem call center
           </li>
         </ul>
-        <div class="section-cta" style="border-top:none;padding-top:28px;margin-top:28px">
-          <a href="#" class="btn btn-green" onclick="openQuiz(event)">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.28 11.9a19.79 19.79 0 01-3-8.59A2 2 0 013.26 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            Verificar viabilidade no meu endereço
-          </a>
-          <a href="https://wa.me/556132260350?text=Olá%2C+vim+pelo+site+e+quero+saber+mais+sobre+o+Link+Dedicado." class="btn btn-ghost" target="_blank">Falar com um consultor</a>
-        </div>
       </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#" class="btn btn-green" onclick="openQuiz(event)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.28 11.9a19.79 19.79 0 01-3-8.59A2 2 0 013.26 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Verificar viabilidade no meu endereço
+      </a>
+      <a href="https://wa.me/556132260350?text=Olá%2C+vim+pelo+site+e+quero+saber+mais+sobre+o+Link+Dedicado." class="btn btn-ghost" target="_blank">Falar com um consultor</a>
     </div>
   </div>
 </section>
